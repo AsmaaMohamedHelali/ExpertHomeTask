@@ -1,8 +1,9 @@
-package com.example.android.aqarmaptask.utils.webservice;
+package com.example.android.experthometask.utils.webservice;
 
 
 
-import com.example.android.aqarmaptask.utils.Constants;
+
+import com.example.android.experthometask.utils.Constants;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,7 +11,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyTask {
@@ -23,7 +23,6 @@ public class MyTask {
         logging.setLevel(Level.BODY);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constants.serverURL)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(MyTask.okClient())
                 .build();
