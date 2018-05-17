@@ -16,14 +16,12 @@
 package com.example.android.experthometask.adapters;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.widget.CardView;
+
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,8 +35,8 @@ public class OrdersResultsAdapter extends RecyclerView.Adapter<OrdersResultsAdap
     private Context context;
 
 
-    public OrdersResultsAdapter(Context context) {
-//        this.searchResponse = searchResponse;
+    public OrdersResultsAdapter(OrdersResultResponse ordersResult,Context context) {
+        this.ordersResult = ordersResult;
         this.context=context;
     }
 
@@ -59,49 +57,47 @@ public class OrdersResultsAdapter extends RecyclerView.Adapter<OrdersResultsAdap
 
     @Override
     public void onBindViewHolder(OrdersViewHolder holder, int position) {
-//        holder.itemTitle.setText(searchResponse.getListings().getItems().get(position).getTitle());
-//        holder.itemPrice.setText(searchResponse.getListings().getItems().get(position).getPrice()+"");
-//        holder.itemAddress.setText(searchResponse.getListings().getItems().get(position).getAddress());
-//        Picasso.with(context).load(searchResponse.getListings().getItems().get(position)
-//                .getMainPhoto().getFile().getThumbnails().getLarge())
-//                .placeholder(R.drawable.placeholder)
-//                .into(holder.itemImage);
-//        holder.cvResult.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
+        holder.tvDate.setText(ordersResult.getData().get(position).OrderDate);
+        holder.tvCustomerName.setText(ordersResult.getData().get(position).getCustomers().customer_name);
+        holder.tvOrderId.setText(ordersResult.getData().get(position).getOrder_Id()+"");
+        holder.tvTotal.setText(ordersResult.getData().get(position).getTotal()+"£");
+
+        holder.rlOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 //                Intent intent = new Intent(context, ItemDetailsActivity.class);
 //                Bundle bundle = new Bundle();
 //                bundle.putSerializable("ITEMDetails", searchResponse.getListings().getItems().get(position));
 //                intent.putExtra("bundle", bundle);
 //                context.startActivity(intent);
-//            }
-//        });
+                Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
     @Override
     public int getItemCount() {
-//        if(searchResponse.getListings().getItems()!=null){
-//            return searchResponse.getListings().getItems().size();
-//        }
+        if(ordersResult.getData()!=null){
+            return ordersResult.getData().size();
+        }
         return 0;
     }
 
 
     class OrdersViewHolder extends RecyclerView.ViewHolder {
 
-        TextView itemTitle, itemPrice, itemAddress;
-        ImageView itemImage;
-        CardView cvResult;
+        TextView tvDate, tvCustomerName, tvTotal,tvOrderId;
+        RelativeLayout rlOrders;
 
         public OrdersViewHolder(View itemView) {
             super(itemView);
 
-//            itemTitle = (TextView) itemView.findViewById(R.id.item_title);
-//            itemPrice = (TextView) itemView.findViewById(R.id.item_price);
-//            itemAddress = (TextView) itemView.findViewById(R.id.item_address);
-//            itemImage = (ImageView) itemView.findViewById(R.id.item_image);
-//            cvResult = (CardView) itemView.findViewById(R.id.card_view);
+            tvDate = (TextView) itemView.findViewById(R.id.tv_date);
+            tvCustomerName = (TextView) itemView.findViewById(R.id.tv_customer_name);
+            tvTotal = (TextView) itemView.findViewById(R.id.tv_total);
+            tvOrderId = (TextView) itemView.findViewById(R.id.tv_order_id);
+            rlOrders = (RelativeLayout) itemView.findViewById(R.id.rl_oders);
         }
 
 

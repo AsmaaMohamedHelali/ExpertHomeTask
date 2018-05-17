@@ -18,5 +18,15 @@ public class Data {
     public String OrderDate;
 
 
+    public com.example.android.experthometask.models.orders.Customers getCustomers() {
+        return Customers;
+    }
 
+    public int getOrder_Id() {
+        return order_Id;
+    }
+
+    public int getTotal() {
+        return total;
+    }
 }

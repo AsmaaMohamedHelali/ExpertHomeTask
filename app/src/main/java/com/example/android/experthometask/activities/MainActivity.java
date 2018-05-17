@@ -12,9 +12,12 @@ import android.widget.Toast;
 
 import com.example.android.experthometask.R;
 import com.example.android.experthometask.adapters.OrdersResultsAdapter;
+import com.example.android.experthometask.models.orders.Data;
 import com.example.android.experthometask.models.orders.OrdersResultResponse;
 import com.example.android.experthometask.utils.network.NetworkUtil;
 import com.example.android.experthometask.utils.webservice.MyTask;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -68,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     OrdersResultResponse result = response.body();
                     if (result != null) {
-                        Toast.makeText(MainActivity.this, "yes", Toast.LENGTH_LONG).show();
-//                        initRecyclerView();
+                        initRecyclerView(result);
                     } else {
                         Toast.makeText(MainActivity.this, getString(R.string.invalid_data), Toast.LENGTH_LONG).show();
 
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initRecyclerView() {
+    private void initRecyclerView(OrdersResultResponse data) {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rvResults.setLayoutManager(layoutManager);
 
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         /*
          * The GreenAdapter is responsible for displaying each item in the list.
          */
-        orderResultAdapter = new OrdersResultsAdapter(this);
+        orderResultAdapter = new OrdersResultsAdapter(data,this);
         rvResults.setAdapter(orderResultAdapter);
     }
 

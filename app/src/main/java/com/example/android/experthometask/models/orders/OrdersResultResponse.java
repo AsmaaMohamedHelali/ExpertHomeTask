@@ -8,4 +8,7 @@ public class OrdersResultResponse {
     public String $id;
     public List<Data> data = null;
 
+    public List<Data> getData() {
+        return data;
+    }
 }

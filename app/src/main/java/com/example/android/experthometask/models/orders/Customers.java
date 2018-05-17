@@ -15,8 +15,7 @@ public class Customers {
     public String actitvity;
     public String $ref;
 
-
-
-
-
+    public String getCustomer_name() {
+        return customer_name;
+    }
 }
