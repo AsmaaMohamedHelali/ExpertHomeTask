@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">ExpertHomeTask</string>
     <string name="user_login">Login</string>
-    <string name="user_email">Email</string>
+    <string name="user_name">User Name</string>
     <string name="user_password">Password</string>
+    <string name="empty_field">please enter valid value</string>
+    <string name="offline">please check network</string>
+    <string name="something_went_wrong">sorry something went wrong</string>
+    <string name="invalid_data">please check your username or password</string>
 </resources>

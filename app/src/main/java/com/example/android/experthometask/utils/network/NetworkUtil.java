@@ -1,4 +1,4 @@
-package com.example.android.aqarmaptask.utils.network;
+package com.example.android.experthometask.utils.network;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

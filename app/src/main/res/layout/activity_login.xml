@@ -44,8 +44,8 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:gravity="left"
-                    android:hint="@string/user_email"
-                    android:inputType="textEmailAddress"
+                    android:hint="@string/user_name"
+                    android:inputType="text"
                     android:textColor="@color/colorLinkWater"
                     android:textColorHint="@color/colorSolitude"
                     android:textSize="@dimen/text_size" />
