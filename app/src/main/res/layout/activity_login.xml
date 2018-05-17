@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_top"
-                android:background="@color/colorCornflowerBlue"
+                android:background="@drawable/ripple_effect"
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
                 android:text="@string/user_login"
