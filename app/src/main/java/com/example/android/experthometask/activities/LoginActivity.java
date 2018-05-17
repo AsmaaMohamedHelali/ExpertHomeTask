@@ -60,11 +60,11 @@ public class LoginActivity extends AppCompatActivity {
         switch (NetworkUtil.getConnectivityStatus(this)) {
             case OFFLINE:
                 loadingProgressBar.setVisibility(View.GONE);
-                Toast.makeText(this, getString(R.string.offline), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.offline), Toast.LENGTH_LONG).show();
                 break;
             case WIFI_CONNECTED_WITHOUT_INTERNET:
                 loadingProgressBar.setVisibility(View.GONE);
-                Toast.makeText(this, getString(R.string.offline), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.offline), Toast.LENGTH_LONG).show();
                 break;
             case MOBILE_DATA_CONNECTED:
             case WIFI_CONNECTED_WITH_INTERNET:
