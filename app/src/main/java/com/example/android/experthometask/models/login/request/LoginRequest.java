@@ -4,8 +4,8 @@ package com.example.android.experthometask.models.login.request;
 
 public class LoginRequest {
 
-    public String Email;
-    public String Password;
+    private String Email;
+    private String Password;
 
     public LoginRequest(String email, String password) {
         Email = email;

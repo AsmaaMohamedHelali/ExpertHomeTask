@@ -16,6 +16,11 @@ public interface MyTaskAPI {
 
     @POST(Constants.apiURL + "/Account/Login")
     Call<LoginResponse> login(@Body LoginRequest user);
+
     @GET(Constants.apiURL + "/Orders/GetOrders")
     Call<OrdersResultResponse> ordersResult();
+
+    @GET(Constants.apiURL + "/Customer/GetCustomerOrdersById")
+    Call<OrdersResultResponse> orderDetails();
+
 }

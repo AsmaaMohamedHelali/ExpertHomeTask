@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Department {
 
-    public String $id;
-    public Governorate governorate;
-    public int department_code;
-    public String department_name;
-    public int governorate_code;
-    public List<Department_> customers = null;
+    private String $id;
+    private Governorate governorate;
+    private int department_code;
+    private String department_name;
+    private int governorate_code;
+    private List<Department_> customers = null;
 
 
 

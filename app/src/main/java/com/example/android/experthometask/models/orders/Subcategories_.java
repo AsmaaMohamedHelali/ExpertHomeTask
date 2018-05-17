@@ -5,16 +5,16 @@ import java.util.List;
 
 public class Subcategories_ {
 
-    public String $id;
-    public Categories categories;
-    public List<ProductDiscount> productDiscounts = null;
-    public List<SubCategoriesImage> subCategoriesImages = null;
-    public int subcategory_ID;
-    public String subcategory_Size;
-    public Float subcategory_Price;
-    public int subcategory_Package;
-    public String creation_Date;
-    public int category_ID;
+    private String $id;
+    private Categories categories;
+    private List<ProductDiscount> productDiscounts = null;
+    private List<SubCategoriesImage> subCategoriesImages = null;
+    private int subcategory_ID;
+    private String subcategory_Size;
+    private Float subcategory_Price;
+    private int subcategory_Package;
+    private String creation_Date;
+    private int category_ID;
 
 
 }

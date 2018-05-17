@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Categories {
 
-    public String $id;
-    public List<OrderDiscount> OrderDiscounts = null;
-    public List<Subcategory> subcategories = null;
-    public int categoryID;
-    public String categoryName;
-    public String categoryHeader;
-    public Object image;
+    private String $id;
+    private List<OrderDiscount> OrderDiscounts = null;
+    private List<Subcategory> subcategories = null;
+    private int categoryID;
+    private String categoryName;
+    private String categoryHeader;
+    private Object image;
 
 
 

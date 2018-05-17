@@ -7,22 +7,22 @@ import com.example.android.experthometask.models.login.response.LoginResponse;
 
 public class Payment {
 
-    public String $id;
-    public Department_ Customers;
-    public Department_ Orders;
-    public Department_ Users;
-    public int Payment_Id;
-    public int order_Id;
-    public int customer_Id;
-    public String User_id;
-    public Object Notes;
-    public String PaidDate;
-    public String CreatedDate;
-    public Boolean IsPaid;
-    public int TotalInvoiceValue;
-    public int PaidAmount;
-    public int RemainAmount;
-    public Object NextPayDate;
+    private String $id;
+    private Department_ Customers;
+    private Department_ Orders;
+    private Department_ Users;
+    private int Payment_Id;
+    private int order_Id;
+    private int customer_Id;
+    private String User_id;
+    private Object Notes;
+    private String PaidDate;
+    private String CreatedDate;
+    private Boolean IsPaid;
+    private int TotalInvoiceValue;
+    private int PaidAmount;
+    private int RemainAmount;
+    private Object NextPayDate;
 
 
 

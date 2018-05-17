@@ -4,15 +4,15 @@ package com.example.android.experthometask.models.orders;
 
 public class OrderDetail {
 
-    public String $id;
-    public Department_ Orders;
-    public Subcategories subcategories;
-    public int OrderDetailId;
-    public int order_Id;
-    public int subcategory_ID;
-    public int Quantity;
-    public int type;
-    public Float UnitPrice;
+    private String $id;
+    private Department_ Orders;
+    private Subcategories subcategories;
+    private int OrderDetailId;
+    private int order_Id;
+    private int subcategory_ID;
+    private int Quantity;
+    private int type;
+    private Float UnitPrice;
 
 
 

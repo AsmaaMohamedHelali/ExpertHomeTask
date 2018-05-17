@@ -5,22 +5,22 @@ import java.util.List;
 
 public class Data {
 
-    public String $id;
-    public List<Object> Claims = null;
-    public List<Object> Logins = null;
-    public List<Role> Roles = null;
-    public String Email;
-    public Boolean EmailConfirmed;
-    public String PasswordHash;
-    public String SecurityStamp;
-    public String PhoneNumber;
-    public Boolean PhoneNumberConfirmed;
-    public Boolean TwoFactorEnabled;
-    public Object LockoutEndDateUtc;
-    public Boolean LockoutEnabled;
-    public Integer AccessFailedCount;
-    public String Id;
-    public String UserName;
+    private String $id;
+    private List<Object> Claims = null;
+    private List<Object> Logins = null;
+    private List<Role> Roles = null;
+    private String Email;
+    private Boolean EmailConfirmed;
+    private String PasswordHash;
+    private String SecurityStamp;
+    private String PhoneNumber;
+    private Boolean PhoneNumberConfirmed;
+    private Boolean TwoFactorEnabled;
+    private Object LockoutEndDateUtc;
+    private Boolean LockoutEnabled;
+    private Integer AccessFailedCount;
+    private String Id;
+    private String UserName;
 
 
 

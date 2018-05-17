@@ -10,6 +10,7 @@ import com.example.android.experthometask.R;
 import butterknife.ButterKnife;
 
 public class OrderDetailsActivity extends AppCompatActivity {
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order_details);
         ButterKnife.bind(this);
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getIntentData();
 //        loadingProgressBar.setVisibility(View.VISIBLE);
 //        checkNetwork();
     }
@@ -28,5 +30,9 @@ public class OrderDetailsActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
 
+    }
+
+    public void getIntentData() {
+        id=getIntent().getStringExtra("ID");
     }
 }

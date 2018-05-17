@@ -4,9 +4,9 @@ package com.example.android.experthometask.models.login.response;
 
 public class Role {
 
-    public String $id;
-    public String UserId;
-    public String RoleId;
+    private String $id;
+    private String UserId;
+    private String RoleId;
 
 
 }

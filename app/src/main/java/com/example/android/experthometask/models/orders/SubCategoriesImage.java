@@ -4,11 +4,11 @@ package com.example.android.experthometask.models.orders;
 
 public class SubCategoriesImage {
 
-    public String $id;
-    public Department_ subcategories;
-    public int Image_Id;
-    public String Image_Name;
-    public int subcategory_ID;
+    private String $id;
+    private Department_ subcategories;
+    private int Image_Id;
+    private String Image_Name;
+    private int subcategory_ID;
 
 
 
