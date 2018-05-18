@@ -8,4 +8,5 @@
     <string name="something_went_wrong">sorry something went wrong</string>
     <string name="invalid_data">please check your username or password</string>
     <string name="ordersResult">Orders Result</string>
+    <string name="orderDetails">Order Details</string>
 </resources>
