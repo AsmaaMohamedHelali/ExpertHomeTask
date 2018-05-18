@@ -2,7 +2,9 @@
 package com.example.android.experthometask.models.orders;
 
 
-public class SubCategoriesImage {
+import java.io.Serializable;
+
+public class SubCategoriesImage implements Serializable{
 
     private String $id;
     private Department_ subcategories;

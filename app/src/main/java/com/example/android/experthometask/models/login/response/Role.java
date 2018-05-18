@@ -2,7 +2,9 @@
 package com.example.android.experthometask.models.login.response;
 
 
-public class Role {
+import java.io.Serializable;
+
+public class Role implements Serializable {
 
     private String $id;
     private String UserId;

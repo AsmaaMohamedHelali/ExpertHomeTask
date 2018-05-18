@@ -9,12 +9,15 @@ import android.view.View;
 
 import com.example.android.experthometask.R;
 import com.example.android.experthometask.adapters.OrderDetailsAdapter;
+import com.example.android.experthometask.models.orders.OrderDetail;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class OrderDetailsActivity extends AppCompatActivity {
-    private String id;
+    private List<OrderDetail> orderDetailList;
     @BindView(R.id.rv_resultDetails)
     RecyclerView rvResultDetails;
 
@@ -26,10 +29,9 @@ public class OrderDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order_details);
         ButterKnife.bind(this);
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getIntentData();
         initRecyclerView();
-//        getIntentData();
-//        loadingProgressBar.setVisibility(View.VISIBLE);
-//        checkNetwork();
+
     }
     private void initRecyclerView() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -45,7 +47,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         /*
          * The GreenAdapter is responsible for displaying each item in the list.
          */
-        orderDetailsAdapter = new OrderDetailsAdapter(this);
+        orderDetailsAdapter = new OrderDetailsAdapter(orderDetailList,this);
         rvResultDetails.setAdapter(orderDetailsAdapter);
     }
     @Override
@@ -59,6 +61,6 @@ public class OrderDetailsActivity extends AppCompatActivity {
     }
 
     public void getIntentData() {
-        id=getIntent().getStringExtra("ID");
+        orderDetailList= (List<OrderDetail>) getIntent().getExtras().getSerializable("DETAILS");
     }
 }

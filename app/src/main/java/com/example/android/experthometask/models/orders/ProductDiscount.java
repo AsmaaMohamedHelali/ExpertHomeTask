@@ -2,7 +2,9 @@
 package com.example.android.experthometask.models.orders;
 
 
-public class ProductDiscount {
+import java.io.Serializable;
+
+public class ProductDiscount implements Serializable{
 
     private String $ref;
     private String $id;

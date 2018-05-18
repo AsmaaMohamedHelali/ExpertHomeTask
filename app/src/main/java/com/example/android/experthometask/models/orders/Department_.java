@@ -2,7 +2,9 @@
 package com.example.android.experthometask.models.orders;
 
 
-public class Department_ {
+import java.io.Serializable;
+
+public class Department_ implements Serializable {
 
     private String $ref;
 

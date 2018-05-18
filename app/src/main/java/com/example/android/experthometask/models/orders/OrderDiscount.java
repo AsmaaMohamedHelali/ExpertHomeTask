@@ -2,7 +2,9 @@
 package com.example.android.experthometask.models.orders;
 
 
-public class OrderDiscount {
+import java.io.Serializable;
+
+public class OrderDiscount implements Serializable{
 
     private String $id;
     private Department_ categories;

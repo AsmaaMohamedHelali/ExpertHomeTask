@@ -1,9 +1,10 @@
 
 package com.example.android.experthometask.models.login.response;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Data {
+public class Data implements Serializable {
 
     private String $id;
     private List<Object> Claims = null;

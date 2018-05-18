@@ -1,9 +1,10 @@
 
 package com.example.android.experthometask.models.orders;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Data {
+public class Data implements Serializable{
 
     private String $id;
     private Customers Customers;
@@ -36,5 +37,9 @@ public class Data {
 
     public String getOrderDate() {
         return OrderDate;
+    }
+
+    public List<OrderDetail> getOrderDetails() {
+        return OrderDetails;
     }
 }

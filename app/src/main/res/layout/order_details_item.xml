@@ -24,12 +24,46 @@
             android:layout_height="wrap_content"
             android:visibility="gone">
 
-            <TextView
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@android:color/holo_green_dark"
-                android:gravity="center"
-                android:text="Content view" />
+                android:layout_height="190dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_date_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorCornflowerBlue"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_size_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_date_inner"
+                    android:textColor="@color/colorCornflowerBlue"
+                    android:textDirection="ltr"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_price_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_size_inner"
+                    android:textColor="@color/colorCornflowerBlue"
+                    android:textDirection="ltr"
+                    android:textStyle="bold"/>
+
+
+
+            </RelativeLayout>
 
         </FrameLayout>
 
@@ -38,12 +72,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="@android:color/holo_blue_dark"
-                android:gravity="center"
-                android:text="Title view" />
+                android:layout_height="90dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_quantity"
+                    android:textDirection="ltr"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_type"
+                    android:textDirection="ltr" />
+
+                <TextView
+                    android:id="@+id/tv_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
 
         </FrameLayout>
 

@@ -1,9 +1,10 @@
 
 package com.example.android.experthometask.models.orders;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Subcategory {
+public class Subcategory implements Serializable{
 
     private String $ref;
     private String $id;

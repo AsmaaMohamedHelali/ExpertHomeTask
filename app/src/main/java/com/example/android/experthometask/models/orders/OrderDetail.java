@@ -2,7 +2,9 @@
 package com.example.android.experthometask.models.orders;
 
 
-public class OrderDetail {
+import java.io.Serializable;
+
+public class OrderDetail implements Serializable {
 
     private String $id;
     private Department_ Orders;
@@ -15,7 +17,23 @@ public class OrderDetail {
     private Float UnitPrice;
 
 
+    public Subcategories getSubcategories() {
+        return subcategories;
+    }
 
+    public int getOrderDetailId() {
+        return OrderDetailId;
+    }
 
+    public int getQuantity() {
+        return Quantity;
+    }
 
+    public int getType() {
+        return type;
+    }
+
+    public Float getUnitPrice() {
+        return UnitPrice;
+    }
 }

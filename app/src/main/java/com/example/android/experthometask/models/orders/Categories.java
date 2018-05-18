@@ -1,9 +1,10 @@
 
 package com.example.android.experthometask.models.orders;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Categories {
+public class Categories implements Serializable{
 
     private String $id;
     private List<OrderDiscount> OrderDiscounts = null;

@@ -30,6 +30,8 @@ import com.example.android.experthometask.R;
 import com.example.android.experthometask.activities.OrderDetailsActivity;
 import com.example.android.experthometask.models.orders.OrdersResultResponse;
 
+import java.io.Serializable;
+
 public class OrdersResultsAdapter extends RecyclerView.Adapter<OrdersResultsAdapter.OrdersViewHolder> {
 
 
@@ -68,7 +70,7 @@ public class OrdersResultsAdapter extends RecyclerView.Adapter<OrdersResultsAdap
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, OrderDetailsActivity.class);
-                intent.putExtra("ID",ordersResult.getData().get(position).get$id());
+                intent.putExtra("DETAILS", (Serializable) ordersResult.getData().get(position).getOrderDetails());
                 context.startActivity(intent);
             }
         });

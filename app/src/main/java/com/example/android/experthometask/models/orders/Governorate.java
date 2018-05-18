@@ -1,9 +1,10 @@
 
 package com.example.android.experthometask.models.orders;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Governorate {
+public class Governorate implements Serializable {
 
     private String $id;
     private int governorate_code;
